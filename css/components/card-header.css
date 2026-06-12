@@ -1,0 +1,63 @@
+.card-header {
+  background-color: var(--color-navy-900);
+  border-radius: 0.9375rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
+}
+
+.card-profile {
+  background-color: var(--color-purple-600);
+  border-radius: 0.9375rem;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-300);
+  padding: var(--spacing-400);
+}
+
+.card-profile img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 3px solid var(--color-white);
+}
+
+.card-texts .card-info {
+  font-size: var(--text-preset-6);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-navy-200);
+  display: inline-block;
+  margin-bottom: var(--spacing-100);
+}
+
+.card-texts h1 {
+  font-size: var(--text-preset-4);
+  font-weight: var(--font-weight-light);
+  color: var(--color-white);
+}
+
+.card-controls ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: var(--spacing-300);
+}
+
+.card-controls button {
+  width: 109px;
+  font-size: var(--text-preset-5);
+  font-weight: var(--font-weight-regular);
+  background-color: transparent;
+  color: var(--color-purple-500);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card-controls button:hover {
+  color: var(--color-white);
+}
+
+.card-controls button.active {
+  color: var(--color-white);
+}

@@ -1,80 +1,217 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Time tracking dashboard</title>
+    <title>Time tracking dashboard</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
 
-  Report for
-  Jeremy Robson
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <main class="dashboard">
+      <!-- CARD HEADER -->
+      <header class="card card-header">
+        <div class="card-profile">
+          <img src="./images/image-jeremy.png" alt="Jeremy Robson" />
+          <div class="card-texts">
+            <span class="card-info">Report for</span>
+            <h1>Jeremy Robson</h1>
+          </div>
+        </div>
 
-  Daily
-  Weekly
-  Monthly
+        <div class="card-controls">
+          <ul>
+            <li>
+              <button type="button" class="control-btn" data-timeframe="daily">
+                Daily
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                class="control-btn active"
+                data-timeframe="Weekly"
+              >
+                Weekly
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                class="control-btn"
+                data-timeframe="Monthly"
+              >
+                Monthly
+              </button>
+            </li>
+          </ul>
+        </div>
+      </header>
 
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
+      <!-- CARD WORK -->
+      <section class="card-activity card-activity--work">
+        <div class="card-activity__bg">
+          <img src="./images/icon-work.svg" alt="" aria-hidden="true" />
+        </div>
 
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
+        <div class="card-activity__content">
+          <div class="card-activity__header">
+            <h2 class="card-activity__title">Work</h2>
+            <button
+              type="button"
+              class="card-activity__options-btn"
+              aria-label="More options"
+            >
+              <img src="./images/icon-ellipsis.svg" alt="" />
+            </button>
+          </div>
 
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
+          <div class="card-activity__time-info">
+            <p class="card-activity__current-time">32hrs</p>
+            <p class="card-activity__previous-time">Previous - 36hrs</p>
+          </div>
+        </div>
+      </section>
 
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
+      <!-- CARD PLAY -->
+      <section class="card-activity card-activity--play">
+        <div class="card-activity__bg">
+          <img src="./images/icon-play.svg" alt="" aria-hidden="true" />
+        </div>
 
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
+        <div class="card-activity__content">
+          <div class="card-activity__header">
+            <h2 class="card-activity__title">Play</h2>
+            <button
+              type="button"
+              class="card-activity__options-btn"
+              aria-label="More options"
+            >
+              <img src="./images/icon-ellipsis.svg" alt="" />
+            </button>
+          </div>
 
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
+          <div class="card-activity__time-info">
+            <p class="card-activity__current-time">10hrs</p>
+            <p class="card-activity__previous-time">Previous - 8hrs</p>
+          </div>
+        </div>
+      </section>
 
-  
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
-</body>
+      <!-- CARD STUDY -->
+      <section class="card-activity card-activity--study">
+        <div class="card-activity__bg">
+          <img src="./images/icon-study.svg" alt="" aria-hidden="true" />
+        </div>
+
+        <div class="card-activity__content">
+          <div class="card-activity__header">
+            <h2 class="card-activity__title">Study</h2>
+            <button
+              type="button"
+              class="card-activity__options-btn"
+              aria-label="More options"
+            >
+              <img src="./images/icon-ellipsis.svg" alt="" />
+            </button>
+          </div>
+
+          <div class="card-activity__time-info">
+            <p class="card-activity__current-time">4hrs</p>
+            <p class="card-activity__previous-time">Previous - 7hrs</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARD EXERCISE -->
+      <section class="card-activity card-activity--exercise">
+        <div class="card-activity__bg">
+          <img src="./images/icon-exercise.svg" alt="" aria-hidden="true" />
+        </div>
+
+        <div class="card-activity__content">
+          <div class="card-activity__header">
+            <h2 class="card-activity__title">Exercise</h2>
+            <button
+              type="button"
+              class="card-activity__options-btn"
+              aria-label="More options"
+            >
+              <img src="./images/icon-ellipsis.svg" alt="" />
+            </button>
+          </div>
+
+          <div class="card-activity__time-info">
+            <p class="card-activity__current-time">4hrs</p>
+            <p class="card-activity__previous-time">Previous - 5hrs</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARD SOCIAL -->
+      <section class="card-activity card-activity--social">
+        <div class="card-activity__bg">
+          <img src="./images/icon-social.svg" alt="" aria-hidden="true" />
+        </div>
+
+        <div class="card-activity__content">
+          <div class="card-activity__header">
+            <h2 class="card-activity__title">Social</h2>
+            <button
+              type="button"
+              class="card-activity__options-btn"
+              aria-label="More options"
+            >
+              <img src="./images/icon-ellipsis.svg" alt="" />
+            </button>
+          </div>
+
+          <div class="card-activity__time-info">
+            <p class="card-activity__current-time">5hrs</p>
+            <p class="card-activity__previous-time">Previous - 10hrs</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARD SELF CARE -->
+      <section class="card-activity card-activity--self-care">
+        <div class="card-activity__bg">
+          <img src="./images/icon-self-care.svg" alt="" aria-hidden="true" />
+        </div>
+
+        <div class="card-activity__content">
+          <div class="card-activity__header">
+            <h2 class="card-activity__title">Self Care</h2>
+            <button
+              type="button"
+              class="card-activity__options-btn"
+              aria-label="More options"
+            >
+              <img src="./images/icon-ellipsis.svg" alt="" />
+            </button>
+          </div>
+
+          <div class="card-activity__time-info">
+            <p class="card-activity__current-time">2hrs</p>
+            <p class="card-activity__previous-time">Previous - 2hrs</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
