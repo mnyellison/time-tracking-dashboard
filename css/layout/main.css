@@ -1,0 +1,33 @@
+body {
+  font-family: var(--font-family);
+  font-size: var(--text-preset-5);
+  font-weight: var(--font-weight-regular);
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-navy-950);
+  display: grid;
+  place-items: center;
+  padding: 5.0625rem 1.5rem;
+}
+
+.activity-tracker {
+  width: 100%;
+  max-width: 327px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-300);
+}
+
+@media screen and (min-width: 768px) {
+  .activity-tracker {
+    max-width: 612px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .activity-tracker {
+    max-width: 1116px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

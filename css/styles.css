@@ -1,8 +1,8 @@
 @import url("./base/reset.css");
 @import url("./base/tokens.css");
 
-@import url("./layout/main-page.css");
+@import url("./layout/main.css");
 
-@import url("./components/card-header.css");
+@import url("./components/tracker-menu.css");
 @import url("./components/card-activity.css");
 @import url("./components/button-options.css");

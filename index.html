@@ -23,192 +23,160 @@
     <script src="./js/script.js" defer></script>
   </head>
   <body>
-    <main class="dashboard">
-      <!-- CARD HEADER -->
-      <header class="card card-header">
-        <div class="card-profile">
-          <img src="./images/image-jeremy.png" alt="Jeremy Robson" />
-          <div class="card-texts">
-            <span class="card-info">Report for</span>
-            <h1>Jeremy Robson</h1>
+    <main class="activity-tracker">
+      <section class="activity-tracker__menu">
+        <div class="activity-tracker__owner">
+          <img
+            src="./images/image-jeremy.png"
+            alt=""
+            class="activity-tracker__owner-img"
+          />
+          <div class="activity-tracker__owner-container">
+            <p class="activity-tracker__owner-for">Report for</p>
+            <h1 class="activity-tracker__owner-name">Jeremy Robson</h1>
           </div>
         </div>
-
-        <div class="card-controls">
-          <ul>
-            <li>
-              <button type="button" class="control-btn" data-timeframe="daily">
-                Daily
-              </button>
-            </li>
-            <li>
-              <button
-                type="button"
-                class="control-btn active"
-                data-timeframe="Weekly"
-              >
-                Weekly
-              </button>
-            </li>
-            <li>
-              <button
-                type="button"
-                class="control-btn"
-                data-timeframe="Monthly"
-              >
-                Monthly
-              </button>
-            </li>
-          </ul>
+        <div class="activity-tracker__options">
+          <button class="activity-tracker__option" data-option="daily">
+            Daily
+          </button>
+          <button class="activity-tracker__option" data-option="weekly">
+            Weekly
+          </button>
+          <button class="activity-tracker__option" data-option="monthly">
+            Monthly
+          </button>
         </div>
-      </header>
+      </section>
 
-      <!-- CARD WORK -->
-      <section class="card-activity card-activity--work">
-        <div class="card-activity__bg">
-          <img src="./images/icon-work.svg" alt="" aria-hidden="true" />
+      <section class="activity-tracker__activity work">
+        <div class="activity__bg">
+          <img src="./images/icon-work.svg" alt="" />
         </div>
-
-        <div class="card-activity__content">
-          <div class="card-activity__header">
-            <h2 class="card-activity__title">Work</h2>
-            <button
-              type="button"
-              class="card-activity__options-btn"
-              aria-label="More options"
-            >
+        <div class="activity__info">
+          <header class="activity__header">
+            <h2 class="activity__name">Work</h2>
+            <div class="activity__options">
               <img src="./images/icon-ellipsis.svg" alt="" />
-            </button>
-          </div>
-
-          <div class="card-activity__time-info">
-            <p class="card-activity__current-time">32hrs</p>
-            <p class="card-activity__previous-time">Previous - 36hrs</p>
+            </div>
+          </header>
+          <div class="activity__timeframes">
+            <h3 class="activity__current-timeframe">32hrs</h3>
+            <div class="activity__previous-timeframe">
+              <p class="time-window">Previous</p>
+              <p>-</p>
+              <p class="time">36hrs</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- CARD PLAY -->
-      <section class="card-activity card-activity--play">
-        <div class="card-activity__bg">
-          <img src="./images/icon-play.svg" alt="" aria-hidden="true" />
+      <section class="activity-tracker__activity play">
+        <div class="activity__bg">
+          <img src="./images/icon-play.svg" alt="" />
         </div>
-
-        <div class="card-activity__content">
-          <div class="card-activity__header">
-            <h2 class="card-activity__title">Play</h2>
-            <button
-              type="button"
-              class="card-activity__options-btn"
-              aria-label="More options"
-            >
+        <div class="activity__info">
+          <header class="activity__header">
+            <h2 class="activity__name">Play</h2>
+            <div class="activity__options">
               <img src="./images/icon-ellipsis.svg" alt="" />
-            </button>
-          </div>
-
-          <div class="card-activity__time-info">
-            <p class="card-activity__current-time">10hrs</p>
-            <p class="card-activity__previous-time">Previous - 8hrs</p>
+            </div>
+          </header>
+          <div class="activity__timeframes">
+            <h3 class="activity__current-timeframe">10hrs</h3>
+            <div class="activity__previous-timeframe">
+              <p class="time-window">Previous</p>
+              <p>-</p>
+              <p class="time">8hrs</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- CARD STUDY -->
-      <section class="card-activity card-activity--study">
-        <div class="card-activity__bg">
-          <img src="./images/icon-study.svg" alt="" aria-hidden="true" />
+      <section class="activity-tracker__activity study">
+        <div class="activity__bg">
+          <img src="./images/icon-study.svg" alt="" />
         </div>
-
-        <div class="card-activity__content">
-          <div class="card-activity__header">
-            <h2 class="card-activity__title">Study</h2>
-            <button
-              type="button"
-              class="card-activity__options-btn"
-              aria-label="More options"
-            >
+        <div class="activity__info">
+          <header class="activity__header">
+            <h2 class="activity__name">Study</h2>
+            <div class="activity__options">
               <img src="./images/icon-ellipsis.svg" alt="" />
-            </button>
-          </div>
-
-          <div class="card-activity__time-info">
-            <p class="card-activity__current-time">4hrs</p>
-            <p class="card-activity__previous-time">Previous - 7hrs</p>
+            </div>
+          </header>
+          <div class="activity__timeframes">
+            <h3 class="activity__current-timeframe">4hrs</h3>
+            <div class="activity__previous-timeframe">
+              <p class="time-window">Previous</p>
+              <p>-</p>
+              <p class="time">7hrs</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- CARD EXERCISE -->
-      <section class="card-activity card-activity--exercise">
-        <div class="card-activity__bg">
-          <img src="./images/icon-exercise.svg" alt="" aria-hidden="true" />
+      <section class="activity-tracker__activity exercise">
+        <div class="activity__bg">
+          <img src="./images/icon-exercise.svg" alt="" />
         </div>
-
-        <div class="card-activity__content">
-          <div class="card-activity__header">
-            <h2 class="card-activity__title">Exercise</h2>
-            <button
-              type="button"
-              class="card-activity__options-btn"
-              aria-label="More options"
-            >
+        <div class="activity__info">
+          <header class="activity__header">
+            <h2 class="activity__name">Exercise</h2>
+            <div class="activity__options">
               <img src="./images/icon-ellipsis.svg" alt="" />
-            </button>
-          </div>
-
-          <div class="card-activity__time-info">
-            <p class="card-activity__current-time">4hrs</p>
-            <p class="card-activity__previous-time">Previous - 5hrs</p>
+            </div>
+          </header>
+          <div class="activity__timeframes">
+            <h3 class="activity__current-timeframe">4hrs</h3>
+            <div class="activity__previous-timeframe">
+              <p class="time-window">Previous</p>
+              <p>-</p>
+              <p class="time">5hrs</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- CARD SOCIAL -->
-      <section class="card-activity card-activity--social">
-        <div class="card-activity__bg">
-          <img src="./images/icon-social.svg" alt="" aria-hidden="true" />
+      <section class="activity-tracker__activity social">
+        <div class="activity__bg">
+          <img src="./images/icon-social.svg" alt="" />
         </div>
-
-        <div class="card-activity__content">
-          <div class="card-activity__header">
-            <h2 class="card-activity__title">Social</h2>
-            <button
-              type="button"
-              class="card-activity__options-btn"
-              aria-label="More options"
-            >
+        <div class="activity__info">
+          <header class="activity__header">
+            <h2 class="activity__name">Social</h2>
+            <div class="activity__options">
               <img src="./images/icon-ellipsis.svg" alt="" />
-            </button>
-          </div>
-
-          <div class="card-activity__time-info">
-            <p class="card-activity__current-time">5hrs</p>
-            <p class="card-activity__previous-time">Previous - 10hrs</p>
+            </div>
+          </header>
+          <div class="activity__timeframes">
+            <h3 class="activity__current-timeframe">5hrs</h3>
+            <div class="activity__previous-timeframe">
+              <p class="time-window">Previous</p>
+              <p>-</p>
+              <p class="time">10hrs</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- CARD SELF CARE -->
-      <section class="card-activity card-activity--self-care">
-        <div class="card-activity__bg">
-          <img src="./images/icon-self-care.svg" alt="" aria-hidden="true" />
+      <section class="activity-tracker__activity self-care">
+        <div class="activity__bg">
+          <img src="./images/icon-self-care.svg" alt="" />
         </div>
-
-        <div class="card-activity__content">
-          <div class="card-activity__header">
-            <h2 class="card-activity__title">Self Care</h2>
-            <button
-              type="button"
-              class="card-activity__options-btn"
-              aria-label="More options"
-            >
+        <div class="activity__info">
+          <header class="activity__header">
+            <h2 class="activity__name">Self Care</h2>
+            <div class="activity__options">
               <img src="./images/icon-ellipsis.svg" alt="" />
-            </button>
-          </div>
-
-          <div class="card-activity__time-info">
-            <p class="card-activity__current-time">2hrs</p>
-            <p class="card-activity__previous-time">Previous - 2hrs</p>
+            </div>
+          </header>
+          <div class="activity__timeframes">
+            <h3 class="activity__current-timeframe">2hrs</h3>
+            <div class="activity__previous-timeframe">
+              <p class="time-window">Previous</p>
+              <p>-</p>
+              <p class="time">2hrs</p>
+            </div>
           </div>
         </div>
       </section>
