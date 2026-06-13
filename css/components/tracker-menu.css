@@ -11,7 +11,6 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
   gap: var(--spacing-300);
   background-color: var(--color-purple-600);
   border-radius: 0 0 0.9375rem 0.9375rem;
@@ -40,7 +39,7 @@
 }
 
 .activity-tracker__options {
-  padding: var(--spacing-300);
+  padding: var(--spacing-300) var(--spacing-400);
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -52,11 +51,25 @@
   background: transparent;
   border: none;
   color: var(--color-purple-500);
+  transition: all 0.3s ease;
+}
+
+.activity-tracker__option:is(.active, :hover) {
+  color: var(--color-white);
 }
 
 @media screen and (min-width: 768px) {
   .activity-tracker__menu {
     grid-column: 1 / -1;
+  }
+
+  .activity-tracker__options {
+    justify-content: center;
+    gap: var(--spacing-100);
+  }
+
+  .activity-tracker__option {
+    min-width: 109px;
   }
 }
 
@@ -82,5 +95,15 @@
 
   .activity-tracker__owner-name {
     font-size: var(--text-preset-2);
+  }
+
+  .activity-tracker__options {
+    justify-content: start;
+    gap: 1.3125rem;
+    padding: 1.75rem var(--spacing-400);
+  }
+
+  .activity-tracker__option {
+    text-align: start;
   }
 }

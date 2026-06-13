@@ -1,67 +1,93 @@
-.card-activity {
-  position: relative;
-  background-color: var(--color-orange-300);
-  border-radius: 0.9375rem;
-  min-height: 160px;
-  overflow: hidden;
-}
-
-.card-activity__bg {
-  position: relative;
-}
-
-.card-activity__bg img {
-  position: absolute;
-  right: 1rem;
-  top: -4px;
-}
-
-.card-activity__content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.activity-tracker__activity {
   background-color: var(--color-navy-900);
   border-radius: 0.9375rem;
+  overflow: hidden;
+  min-height: 160px;
+  position: relative;
+  display: grid;
+  grid-template-rows: 38px 1fr;
+}
+
+.activity-tracker__activity.work {
+  background-color: var(--color-orange-300);
+}
+
+.activity-tracker__activity.play {
+  background-color: var(--color-blue-300);
+}
+
+.activity-tracker__activity.study {
+  background-color: var(--color-pink-400);
+}
+
+.activity-tracker__activity.exercise {
+  background-color: var(--color-green-400);
+}
+
+.activity-tracker__activity.social {
+  background-color: var(--color-purple-700);
+}
+
+.activity-tracker__activity.self-care {
+  background-color: var(--color-yellow-300);
+}
+
+.activity__bg img {
+  position: absolute;
+  left: 231.58px;
+  top: -10.91px;
+  z-index: 1;
+}
+
+.activity__info {
+  background-color: var(--color-navy-900);
+  border-radius: 0.9375rem 0.9375rem 0 0;
+  padding: var(--spacing-300);
+  z-index: 2;
+  min-height: 122px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: var(--spacing-100);
-  padding: var(--spacing-300);
-  z-index: 1;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-.card-activity__header,
-.card-activity__time-info {
+.activity__info:hover {
+  background-color: var(--color-navy-800);
+}
+
+.activity__header,
+.activity__timeframes {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.card-activity__title {
+.activity__name {
   font-size: var(--text-preset-5);
   font-weight: var(--font-weight-medium);
   color: var(--color-white);
 }
 
-.card-activity__options-btn {
-  background-color: transparent;
-  border: none;
+.activity__options {
+  transition: 0.3s ease;
   cursor: pointer;
 }
 
-.card-activity__options-btn img:hover {
-  fill: var(--color-white);
+.activity__options:hover {
+  filter: brightness(0) invert(1);
 }
 
-.card-activity__current-time {
+.activity__current-timeframe {
   font-size: var(--text-preset-3);
   font-weight: var(--font-weight-light);
   color: var(--color-white);
 }
 
-.card-activity__previous-time {
+.activity__previous-timeframe {
   font-size: var(--text-preset-6);
-  font-weight: var(--font-weight-regular);
+  display: flex;
+  gap: 0.25rem;
   color: var(--color-navy-200);
 }
