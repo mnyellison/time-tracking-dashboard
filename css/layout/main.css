@@ -21,13 +21,17 @@ body {
 @media screen and (min-width: 768px) {
   .activity-tracker {
     max-width: 612px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(188px, 1fr));
   }
 }
 
 @media screen and (min-width: 1200px) {
+  body {
+    padding: 0;
+  }
+
   .activity-tracker {
     max-width: 1116px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(255px, 1fr));
   }
 }
