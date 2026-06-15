@@ -142,6 +142,7 @@
   }
 
   .activity__info {
+    max-width: 261px;
     max-height: 199px;
     padding: var(--spacing-300);
   }
